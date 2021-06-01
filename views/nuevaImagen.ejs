@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+<body>
+  <header>
+    <div>
+      <h1>Fotogalería</h1>
+    </div>
+    <div class="w3-bar w3-black">
+      <a class="w3-bar-item w3-button" href="/anadir" style="width:15% ;color:greenyellow">Añadir Imagen</a>
+      <a class="w3-bar-item w3-button" href="/mostrar" style="width:15%">Mostrar Imágenes</a> 
+    </div>  
+  </header>
+
+  <div class="w3-container">
+    <div class="w3-card-4">
+      <div class="w3-container w3-green">
+        <h2>Añadir imagen</h2>
+      </div>
+
+        <form class="w3-container" action="/anadir" method="POST">
+          <p>
+            <label>Título</label>
+            <input class="w3-input" name="titulo" type="text"  maxlength="10" required pattern="[A-Za-z0-9 _]+">
+          </p>
+
+          <p>
+            <label>Url de la imagen</label>
+            <input class="w3-input" name="url" type="url" required>
+          </p>
+          <p>
+            <input class="w3-input" name="fecha" type="date"> 
+          </p>
+          <p>
+            <input class="w3-input" type="submit" value="Envia" style="width: auto;" >
+          </p>
+          
+        </form>
+
+      <% if (error) { %>
+        <p class="repetida">La url <%= url %>  ya existe en nuestra base de datos.</p>
+        <% } %>
+
+    </div>
+</div>
+
+</body>
+</html>
