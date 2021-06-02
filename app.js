@@ -40,6 +40,12 @@ app.get('/anadir', (req, res) => {
 
 //Mostramos archivo para ver todas las Imagenes
 app.get('/mostrar', (req, res) => {  //
+    //ordenar array por fecha:
+    //console.log("Array Ordenado:--------------------- ",imagenes.sort((a, b) => a.fecha > b.fecha))
+    //console.log(array.sort((a, b) => a.fechas > b.fechas));
+    
+    imagenes.sort((a, b) => a.fecha > b.fecha)
+    console.log("array ordenado:------------------------------------", imagenes)
     res.render('index',{
         totalImagenes: imagenes.length,
         todasLasImagenes:imagenes
@@ -73,10 +79,11 @@ app.get('/mostrar', (req, res) => {  //
         error: true,
         url:url
     })
+    return;
 }
 
      res.redirect('/mostrar'); // hacemos una petición GET a '/mostrar' para volver a ésta 
        
 })
 
-app.listen(3000);
+    app.listen(3000);

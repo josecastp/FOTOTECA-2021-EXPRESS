@@ -1,7 +1,22 @@
 .repetida{
     background-color: rgba(211, 25, 25, 0.788);
-    width: 50%;
-    height: 30px;
     color:white;
     font-size:small;
+}
+.footer{
+    background-color: black;
+    color: rgb(205, 212, 194);
+    font-size: medium;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+   
+}
+.portada{
+    background-color: black;
+    color: rgb(205, 212, 194);
+    font-size: medium;
+    text-align: center;
 }

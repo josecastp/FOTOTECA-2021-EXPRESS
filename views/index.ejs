@@ -3,11 +3,12 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
 
 <body>
   <header>
     <div>
-      <h1>Fotogalería</h1>
+      <%- include('./partials/header.ejs') %>
     </div>
     <div class="w3-bar w3-black">
       <a class="w3-bar-item w3-button" href="/anadir" style="width:15% ">Añadir Imagen</a>
@@ -15,10 +16,10 @@
     </div>  
   </header>
     <div class="w3-row"> 
-        <div class="w3-panel w3-white">
+        <div class="container">
           <% todasLasImagenes %> 
         <% todasLasImagenes.forEach(function(imagen) { %>
-            <div class="w3-card-4" style="width: 200px">
+            <div class="w3-card-4" style="width: 200px; margin: 10px">
               <h2> <%= imagen.titulo %>  </h2>
                 <img src="<%= imagen.url %>" alt="foto" style="width: 100px; height:100px">
                 <p>Fecha: <%= imagen.fecha %>  </p>
@@ -31,6 +32,8 @@
         </div>
               <p>Total de imagenes encontradas: <%= totalImagenes %></p>
         </div>
+    
+        <%- include('./partials/footer.ejs') %>
 
 </body> 
 </html>
