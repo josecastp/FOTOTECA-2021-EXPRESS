@@ -21,8 +21,10 @@
         <% todasLasImagenes.forEach(function(imagen) { %>
             <div class="w3-card-4" style="width: 200px; margin: 10px">
               <h2> <%= imagen.titulo %>  </h2>
-                <img src="<%= imagen.url %>" alt="foto" style="width: 100px; height:100px">
+                <img src="<%= imagen.url %>" alt="foto" style="width: 120px; height:120px">
                 <p>Fecha: <%= imagen.fecha %>  </p>
+                <p class="cuadradoColor" style="background-color:rgb(<%= imagen.color %>)"></p>
+                <p>rgb:<%= imagen.color %> </p>
                 <div class="w3-container w3-center">
                     
                 </div>

@@ -113,7 +113,8 @@ app.post('/anadir', async (req, res)=>{ //Función asincrona; debe esperar la re
 });
     //Tratamos errores 404, app.use recupera cualquier petición o  endpoint), por lo que todo lo que llegue hasta será tratado en esta función:
     app.use((req, res)=>{ 
-        res.status(404).send("<h1>Error 404: Esta página no existe</h1>");
+       // res.status(404).send("<h1>Error 404: Esta página no existe</h1>");
+        res.status(404).sendFile(__dirname + "/404.html")
     })
 
     app.listen(3000);

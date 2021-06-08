@@ -12,6 +12,7 @@
 .container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
    
 }
 .portada{
@@ -19,4 +20,9 @@
     color: rgb(205, 212, 194);
     font-size: medium;
     text-align: center;
+}
+.cuadradoColor{
+    height: 20px;
+    width: 120px;
+    border-radius: 6px;
 }
